@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+<body>
+    <div id="container">
+    <h1>Winter Careers</h1>
+    <img id="banner" src="{{url_for('static', filename='banner.jpg')}}" alt="" height= 200px width=100%/>
+    <h2>About Winter</h2>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quis laborum. Necessitatibus obcaecati earum sed? Iure, ducimus enim! Consequatur laudantium ratione itaque? Atque deleniti molestias modi unde facilis nesciunt vel, suscipit similique qui beatae iste ducimus quibusdam aspernatur. Libero, alias labore? Vero libero dicta, modi id corrupti explicabo dolore provident. </p>
+    <h2>Open Positions</h2>
+    </div>
+    {% include "jobitem.html" %}
+    <div style="text-align:center; margin-bottom: 10px">
+        <button type="button" class="btn btn-success">Contact Us</button>
+    </div>
+    
+
+</body>
+</html>
