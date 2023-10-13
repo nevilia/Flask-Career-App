@@ -48,10 +48,10 @@ JOBS = [
 def hello_world():
     return render_template('home.html', jobs=JOBS)
 
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
 @app.route("/api/jobs")
 def list_jobs():
     return jsonify(JOBS)
-
-@app.route("/index")
-def index():
-    return "Index Page"
