@@ -13,6 +13,7 @@ body{
     height: 320px;
     width: 100%;
     object-fit: cover;
+    margin-bottom: 16px;
 }
 
 h2 {

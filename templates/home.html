@@ -12,17 +12,26 @@
 
 </head>
 <body>
+    {% include "nav.html" %}
+    <img id="banner" src="{{url_for('static', filename='banner.jpg')}}" alt="" height= 200px width=100%/>
     <div id="container">
     <h1>Winter Careers</h1>
-    <img id="banner" src="{{url_for('static', filename='banner.jpg')}}" alt="" height= 200px width=100%/>
-    <h2>About Winter</h2>
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quis laborum. Necessitatibus obcaecati earum sed? Iure, ducimus enim! Consequatur laudantium ratione itaque? Atque deleniti molestias modi unde facilis nesciunt vel, suscipit similique qui beatae iste ducimus quibusdam aspernatur. Libero, alias labore? Vero libero dicta, modi id corrupti explicabo dolore provident. </p>
+    <div class="row">
+        <div class="col-md-6">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quis laborum. Necessitatibus obcaecati earum sed? Iure, ducimus enim! Consequatur laudantium ratione itaque? Atque deleniti molestias modi unde facilis nesciunt vel, suscipit similique qui beatae iste ducimus quibusdam aspernatur. Libero, alias labore? Vero libero dicta, modi id corrupti explicabo dolore provident. </p>
+        </div>
+        <div class="d-none d-md-block col-6">
+            <img id="banner" src="{{url_for('static', filename='people.jpg')}} " alt="" height= 200px width=100%>
+        </div>
+    </div>
+    
     <h2>Open Positions</h2>
     </div>
     {% include "jobitem.html" %}
     <div style="text-align:center; margin-bottom: 10px">
-        <button type="button" class="btn btn-success">Contact Us</button>
+        <a class="btn btn-success" href="mailto:hr@winter.com?subject=Question%20regarding%20job%20openings%20at%20Winter%20Careers&body=My%20name%3A%20%3Center%20your%20name%3E%0A%0AMy%20question%3A%20%3Cquestion%20space%3E">Contact Us</a>
     </div>
+    {% include "footer.html" %}
     
 
 </body>
